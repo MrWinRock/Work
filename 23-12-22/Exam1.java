@@ -15,10 +15,11 @@ public class Exam1 {
 
         
         for(int i = 0; i < length; i++) {
-            array[i] = minNum + i;
+            array[i] = input.nextInt();
             sum += array[i];
         }
         
+        System.out.println(Arrays.toString(array));
         System.out.println(sum);
         
         // Faster way
