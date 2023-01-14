@@ -8,7 +8,7 @@ public class Work6 {
         String findStr = input.next();
 
         boolean isValid = strInput.matches(".*" + findStr + ".*");
-        String result = isValid == true ? "Found" : "Not Found";
+        String result = isValid ? "Found" : "Not Found";
 
         System.out.println(result);
 
