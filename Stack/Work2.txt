@@ -1,0 +1,71 @@
+1.  จงแสดงขั้นตอนการทำ Infix ให้เป็น Postfix โดบใช้ สแตก
+
+1.1.    A+B*C*E
+        (A+((B*C)*E))
+        A       [+]
+        AB      [+][]
+        ABC     [+][*]
+        ABC*+   [][]
+        ABC*+E  [*][]
+        ABC*+E* [][]
+        ABC*E*+
+
+1.2.    X-Y/Z*W^Y
+        (X-((Y/Z)*(W^Y)))
+        X   [-]
+        XY  [-][/]
+        XYZ [-][/]
+        XYZ/ [-][]
+        XYZ/ [-][*][]
+        XYZ/W [-][*][^]
+        XYZ/WY [-][*][^]
+        XYZ/WY^*- [][][]
+        XYZ/WY^*-
+
+
+1.3.    S+F*A/E*W-R/G
+        ((S+(((F*A)/E)*W))-(R/G))
+        S               [+]
+        SF              [+][*][]
+        SFA*            [+][]
+        SFA*E           [+][/]
+        SFA*E/          [+][]
+        SFA*E/W         [+][*]
+        SFA*E/W*+       [][]
+        SFA*E/W*+R      [-][]
+        SFA*E/W*+RG     [-][/]
+        SFA*E/W*+RG/-   [][]
+        SFA*E/W*+RG/-
+
+1.4.    Y/R*E/R*T-U*K
+        (((((Y/R)*E)/R)*T)-(U*K))
+        Y               [/]
+        YR              [/]
+        YR/             []
+        YR/E            [*]
+        YR/E*           []
+        YR/E*R          [/]
+        YR/E*R/         []
+        YR/E*R/T        [*]
+        YR/E*R/T*       []
+        YR/E*R/T*       [-]
+        YR/E*R/T*UK     [-][*]
+        YR/E*R/T*UK*-   []
+        YR/E*R/T*UK*-
+
+
+1.5.    T*Y*U*R-W/D*E
+        ((((T*Y)*U)*R)-((W/D)*E))
+        T   [*]
+        TY   [*]
+        TY*   []
+        TY*U   [*]
+        TY*U*   []
+        TY*U*R   [*]
+        TY*U*R*   []
+        TY*U*R*W   [-][/]
+        TY*U*R*WD   [-][/]
+        TY*U*R*WD/   [-][]
+        TY*U*R*WD/E   [-][*]
+        TY*U*R*WD/E*-   [][]
+        TY*U*R*WD/E*-
