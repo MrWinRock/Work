@@ -56,16 +56,16 @@
 
 1.5.    T*Y*U*R-W/D*E
         ((((T*Y)*U)*R)-((W/D)*E))
-        T   [*]
-        TY   [*]
-        TY*   []
-        TY*U   [*]
-        TY*U*   []
-        TY*U*R   [*]
-        TY*U*R*   []
-        TY*U*R*W   [-][/]
-        TY*U*R*WD   [-][/]
-        TY*U*R*WD/   [-][]
-        TY*U*R*WD/E   [-][*]
+        T               [*]
+        TY              [*]
+        TY*             []
+        TY*U            [*]
+        TY*U*           []
+        TY*U*R          [*]
+        TY*U*R*         []
+        TY*U*R*W        [-][/]
+        TY*U*R*WD       [-][/]
+        TY*U*R*WD/      [-][]
+        TY*U*R*WD/E     [-][*]
         TY*U*R*WD/E*-   [][]
         TY*U*R*WD/E*-
