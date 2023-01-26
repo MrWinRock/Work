@@ -1,29 +1,27 @@
 import java.util.*;
 
 public class InfixToPostfix {
+
     public static String infixToPostfix(String infix) {
         String postfix = "";
         Stack<Character> stack = new Stack<>();
+
         for (int i = 0; i < infix.length(); i++) {
             char c = infix.charAt(i);
             if (Character.isLetterOrDigit(c)) {
                 postfix += c;
-            } 
-            else if (c == '(') {
+            } else if (c == '(') {
                 stack.push(c);
-            } 
-            else if (c == ')') {
+            } else if (c == ')') {
                 while (!stack.isEmpty() && stack.peek() != '(') {
                     postfix += stack.pop();
                 }
                 if (!stack.isEmpty() && stack.peek() != '(') {
                     return "Invalid Expression";
-                } 
-                else {
+                } else {
                     stack.pop();
                 }
-            } 
-            else {
+            } else {
                 while (!stack.isEmpty() && precedence(c) <= precedence(stack.peek())) {
                     postfix += stack.pop();
                 }
@@ -37,7 +35,7 @@ public class InfixToPostfix {
     }
 
     public static int precedence(char c) {
-        switch (c) { 
+        switch (c) {
             case '+':
             case '-':
                 return 1;
@@ -51,11 +49,16 @@ public class InfixToPostfix {
     }
 
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        String strIn = input.next();
-        System.out.println(infixToPostfix(strIn));
-
-        input.close();
+        while (true) {
+            String infix = input.nextLine();
+            if (infix.isEmpty()) {
+                input.close();
+                break;
+            }
+            System.out.println(infixToPostfix(infix));
+        }
     }
 }
