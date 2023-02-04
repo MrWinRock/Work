@@ -1,19 +1,22 @@
-**QUEUE**
+ทำแบบนี้ง่ายกว่ามั้ง
 
-__Operations of Queue__
+public class Work1 {
+    public static void main(String[] args) {
 
-- Enqueue: Add an element to the end of the queue
-- Dequeue: Remove an element from the front of the queue
-- IsEmpty: Check if the queue is empty
-- IsFull: Check if the queue is full
-- Peek: Get the value of the front of the queue without removing it
+        int SIZE = 5, front = -1, rear = -1;
+        String item[] = {"Name1", "Name2", "Name3", "Name4", "Name5"};
+        String queue[] = new queue[5];
 
-__Working of Queue__
-
-- two pointers FRONT and REAR
-- FRONT track the first element of the queue
-- REAR track the last element of the queue
-- initially, set value of FRONT and REAR to -1
-
-
-/** https://www.programiz.com **/
+        for (int i = 0; i < 5; i++) {
+            if (front == 0 && rear == 4) {
+                System.out.println("Queue is Full");
+            } else {
+                if (front == -1)
+                    front = 0;
+                rear++;
+                item[rear] = name;
+                System.out.println(name);
+            }
+        }
+    }
+}
